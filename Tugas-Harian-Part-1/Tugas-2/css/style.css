@@ -1,0 +1,46 @@
+body {
+  background: url("../img/pattern.jpg");
+  font-family: 'Slabo 27px', serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+nav {
+  float: right;
+  
+}
+
+nav ul,
+nav ul li {
+  display: inline-block;
+}
+section {
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  background: white;
+}
+
+p {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}

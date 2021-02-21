@@ -36,8 +36,8 @@ for(var i = 0 ;i < 7; i++) {
 
 //soal 4
 var kalimat ="saya sangat seneng belajar javascript"
-var name = kalimat.split(" ")
-console.log(name)
+var names = kalimat.split(" ")
+console.log(names)
 
 //soal 5
 var daftarBuah = ["2. Apel", "5. Jeruk", "3. Anggur", "4. Semangka", "1. Mangga"];

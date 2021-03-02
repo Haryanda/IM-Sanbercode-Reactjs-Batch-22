@@ -5,7 +5,7 @@ class Jam extends Component {
     super(props);
     this.state = {
       waktu: '',
-      timer: 10,
+      timer: 100,
     };
   }
 

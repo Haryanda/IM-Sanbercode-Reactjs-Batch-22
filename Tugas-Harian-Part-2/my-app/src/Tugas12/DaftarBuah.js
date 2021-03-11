@@ -38,15 +38,17 @@ class DaftarBuah extends Component {
   }
 
   handleEdit(event){
-    let index = event.target.value
-    let dataBuah = this.state.daftarBuah[index]
+    const index = event.target.value
+    const { nama, harga, berat } = this.state.daftarBuah[index]
+    
     this.setState({
-      inputName: dataBuah.nama,
-      inputHarga: dataBuah.harga,
-      inputName: dataBuah.berat,
+      inputName: nama,
+      inputHarga: harga,
+      inputBerat: berat,
       indexOfFrom: index
     })
   }
+  
   handleChange(event){
     console.log(event.target)
     let typeOfInput = event.target.name
@@ -79,6 +81,7 @@ class DaftarBuah extends Component {
     let berat = this.state.inputBerat
 
     console.log(this.state)
+    console.log(event.target.elements.name.value);
 
     if (nama.replace(/\s/g,'') !== "" && harga.replace(/\s/g,'') !== ""){
       let newDaftarBuah = this.state.daftarBuah
@@ -90,7 +93,7 @@ class DaftarBuah extends Component {
         newDaftarBuah[index] = {nama, harga, berat}
       }
 
-      this.this.setState({
+      this.setState({
         daftarBuah: newDaftarBuah,
         inputName: "",
         inputHarga: "",
@@ -165,7 +168,7 @@ class DaftarBuah extends Component {
               >
                 Nama:
               </label>
-              <input type="text" name="name" value={this.state.inputName} />
+              <input type="text" name="name" defaultValue={this.state.inputName} />
             </div>
 
             <div style={{ marginBottom: '5px' }}>
@@ -178,7 +181,7 @@ class DaftarBuah extends Component {
               >
                 Harga:
               </label>
-              <input type="text" name="harga" value={this.state.inputHarga} />
+              <input type="text" name="harga" defaultValue={this.state.inputHarga} />
             </div>
 
             <div style={{ marginBottom: '5px' }}>
@@ -191,7 +194,7 @@ class DaftarBuah extends Component {
               >
                 Berat (dalam gram):
               </label>
-              <input type="number" name="berat" value={this.state.inputBerat} />
+              <input type="number" name="berat" defaultValue={this.state.inputBerat} />
             </div>
 
             <button type="submit">Submit</button>

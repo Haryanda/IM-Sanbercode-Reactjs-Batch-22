@@ -1,0 +1,12 @@
+export { default as Home } from './home';
+export { default as Login } from './user/login';
+export { default as Register } from './user/register';
+export { default as Password } from './user/password';
+export { default as Movies } from './list/movies';
+export { default as Games } from './list/games';
+export { default as DetailGame } from './detail/game';
+export { default as DetailMovie } from './detail/movie';
+export { default as DataGames } from './data/games';
+export { default as DataMovies } from './data/movies';
+export { default as FormGame } from './form/game';
+export { default as FormMovie } from './form/movie';
